@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projektor</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/override.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Outline',     10],
+          ['1st Draft',      7],
+          ['2nd Draft',  0],
+          ['Final Draft', 0]
+        ]);
+
+        var options = {
+          title: 'My Daily Activities',
+          backgroundColor: {fill:'transparent'},
+           colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6']
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+
+
+      }
+    </script>
+  </head>
+  <body id="body2">
+  <!--header -->
+    <div class="header">
+      <div class="navbar navbar-top" id="navbar">
+        <div class="container-fluid" style="padding-left:35px;padding-right:35px;">
+          <ul class="nav navbar-nav navbar-left" id="navbartext">
+            <li><a style="color:#e2e2e2" class="actv" href="home.html">HOME</a></li>
+            <li><a href="#">MY PROJECTS</a></li>
+            <li><a href="#">CREATE PROJECT</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right" id="navbartext">
+            <li><a id="text1" href="index.html">LOG OUT</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <!--middle -->
+    <div class="container" id="bar_one">
+        <div class="col-md-5" id="bar_one_left">
+          <h1 style="text-align:center;color:#1c1c1c;font-family: 'Montserrat', sans-serif;">Your Progress</h1>
+            <ul id="progress_list">
+             <hr style="border-color:#1c1c1c;" />
+              <li>
+                  <h3>Outline</h3>
+                  <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                          
+                        </div>
+                      </div>
+              </li>
+              <li>
+                  <h3>First Draft</h3>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                          
+                        </div>
+                      </div>
+              </li>
+              <li>
+                  <h3>Second Draft</h3>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                          
+                        </div>
+                      </div>
+              </li>
+              <li>
+                      <h3>Final Draft</h3>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                          
+                        </div>
+                      </div>
+              </li>
+              </ul>
+                      
+        </div>
+        <div class="col-md-7" id="bar_one_right">
+         <div id="piechart" style="width: 860px; height: 550px;">
+    
+         </div>
+        </div>
+    </div>
+<div class="container">
+    <div class="row">
+      <div class="col-md-5" style="padding-left:0px">
+      <div id="information_block">
+
+        
+      </div>
+      </div>
+      <div class="col-md-7" style="padding-right:0px">
+        <div id="checklist">
+        </div>
+        <div id="checklist">
+        </div>
+        <div id="checklist">
+        </div>
+        <div id="checklist">
+        </div>
+      </div>
+    </div>
+</div>
+  <!--footer -->
+    <div class="footer">
+
+    </div>
+
+    
+
+
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCnZSc-csOHIxyd4C0QJeiNaKghB-7g04w",
+    authDomain: "projektor-5f3a4.firebaseapp.com",
+    databaseURL: "https://projektor-5f3a4.firebaseio.com",
+    storageBucket: "projektor-5f3a4.appspot.com",
+    messagingSenderId: "405876172335"
+  };
+  firebase.initializeApp(config);
+</script>
+    <!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/javascript.js"></script>
+  </body>
+</html>
+<?php require "login/loginheader.php"; ?>
