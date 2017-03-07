@@ -146,4 +146,12 @@ border-radius:2px;
 #progress_list li{
 	margin-top:35px;
 }
-
+#txtEmail{
+	margin-top:40px;
+}
+#txtPassword{
+	margin-top:20px;
+}
+#btnLogin,#btnSignUp,#btnLogout{
+	margin-top:20px;
+}

@@ -9,22 +9,31 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/override.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
   </head>
   <body id="body">
 
-
     <div class="container">
-      <div class="jumbotron" id="logincontainer">
+      <div class="jumbotron" id="logincontainer" style="height:455px;">
         <h2 style="margin-top:0px;font-size:30pt">Welcome to Projektor</h2>
         <hr />  
-        <div class="jumbotron" id="loginfield">
-          <form action="login.php" method="POST">
-                  <li><input style="border-radius:0px;" name="email" type="text" style="color:black; margin-bottom:20px;" class="form-control" placeholder="Email"></li>
-                  <li style="margin-top:25px;"><input style="border-radius:0px;" name="password" type="password" style="color:black;" class="form-control" placeholder="Password"></li>
-                  <li role="separator" class="divider"></li>
-                  <li><button class="btn btn-success" type="submit" style="margin-top:17px;border-radius:0px;">Login</button>
-                  <p style="font-size:11px;margin-top:12px;"><a href="register.html">Or sign up</a></p>
-          </form>
+        <div class="jumbotron" id="loginfield" style="height:255px;">
+          <li><input class="form-control" type="email" id="txtEmail" placeholder="Email"></li>
+
+          <li><input class="form-control" type="password" id="txtPassword" placeholder="Password"></li>
+
+          <button id="btnLogin" class="btn btn-primary">
+            Log in
+          </button>
+
+          <button id="btnSignUp" class="btn btn-info">
+            Sign Up
+          </button>
+
+          <button id="btnLogout" class="btn btn-action hide">
+            Sign Out
+          </button>
+          <a id="logoutText"></a>
         </div>
       </div>
     </div>
@@ -33,18 +42,7 @@
 
 
 
-<script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCnZSc-csOHIxyd4C0QJeiNaKghB-7g04w",
-    authDomain: "projektor-5f3a4.firebaseapp.com",
-    databaseURL: "https://projektor-5f3a4.firebaseio.com",
-    storageBucket: "projektor-5f3a4.appspot.com",
-    messagingSenderId: "405876172335"
-  };
-  firebase.initializeApp(config);
-</script>
+
     <!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
