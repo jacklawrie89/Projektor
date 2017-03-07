@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projektor</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/override.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"</script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Outline',     10],
+          ['1st Draft',      7],
+          ['2nd Draft',  0],
+          ['Final Draft', 0]
+        ]);
+
+        var options = {
+          title: 'My Daily Activities',
+          backgroundColor: {fill:'transparent'},
+           colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6']
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+
+
+      }
+    </script>
+  </head>
+  <body id="body2">
+  <!--header -->
+    <div class="header">
+      <div class="navbar navbar-top" id="navbar">
+        <div class="container-fluid" style="padding-left:35px;padding-right:35px;">
+          <ul class="nav navbar-nav navbar-left" id="navbartext">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="projects.html">MY PROJECTS</a></li>
+            <li><a style="color:#e2e2e2" class="actv" href="create.html">CREATE PROJECT</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right" id="navbartext">
+            <li><a id="logoutText" onclick="logoutz()">LOG OUT</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <!--middle -->
+
+  <!--footer -->
+    <div class="footer">
+
+    </div>
+
+    
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/javascript.js"></script>
+
+  </body>
+</html>
+<?php require "login/loginheader.php"; ?>
